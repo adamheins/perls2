@@ -88,7 +88,7 @@ class JointSpaceDemo(Demo):
         action_kwargs = {}
         if isinstance(action, np.ndarray):
             action = action.tolist()
-
+	 
         if self.test_fn == "set_joint_delta":
             action_kwargs['delta'] = action
             action_kwargs['set_qpos'] = None
@@ -312,6 +312,7 @@ class JointImpDemoSeq(SingleJointDemo):
         print("--------")
         input("Press Enter to start sending commands.")
         self.step_through_demo()
+
         self.env.robot_interface.reset()
         if self.plot_error:
             self.plot_errors()

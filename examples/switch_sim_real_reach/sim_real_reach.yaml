@@ -1,6 +1,6 @@
 # Cfg file for SimpleReachEnv
 world:
-  type: 'Bullet'
+  type: 'Real'
   robot: 'panda'
   controlType: 'EEImpedance'
 data_dir: '../../data'

@@ -182,7 +182,7 @@ class SwitchSimRealEnv(Env):
 
         # Make the action 6f for delta position and orientation (in axis-angle)
         action = np.hstack((action, np.zeros(3)))
-
+        print("-------------delta action: ", action)
         self.robot_interface.move_ee_delta(delta=action, set_ori=self._initial_ee_orn)
 
     def _check_termination(self):
