@@ -1,0 +1,23 @@
+# Cfg file for  Demo control environment
+world:
+  type: 'Real' #'Bullet' or 'Real'
+  robot: 'panda'
+  controlType: 'JointVelocity'
+data_dir: 'data'
+
+# Simulation parameters
+# sim_params:
+#   time_step: 0.004166  # in seconds #0.004166 #0.002 #0.004166  # 1./240.
+#   MAX_STEPS: 500
+
+# Redis config specific to this machine.
+!include ../cfg/redis.yaml
+
+policy_freq: 20
+control_freq: 500 # Hz
+!include ../cfg/panda.yaml
+# scene_objects:
+#   'None'
+
+# Controller config for each robot
+!include demo_panda_controller.yaml
